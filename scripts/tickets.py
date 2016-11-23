@@ -56,7 +56,8 @@ def retrieve_issues(jira, filter_id, fields, limit=None):
         if isinstance(fields, list):
             fields = ",".join(fields)
         the_filter = jira.filter(filter_id)
-        return jira.search_issues(getattr(the_filter,'jql'), maxResults=max_results, fields=fields)
+        return jira.search_issues(getattr(the_filter, 'jql'),
+                                  maxResults=max_results, fields=fields)
     except JIRAError as exn:
         sys.stderr.write("error: Connection to JIRA failed: %s\n" % exn)
         exit(3)
@@ -79,12 +80,14 @@ def retrieve_qrf(jira):
 
 
 def retrieve_backlog_depth(jira):
-    bd = retrieve_sum_of_field(jira, BACKLOG_DEPTH_JIRA_FILTER, STORY_POINTS_FIELD)
+    bd = retrieve_sum_of_field(jira, BACKLOG_DEPTH_JIRA_FILTER,
+                               STORY_POINTS_FIELD)
     return round(bd, 2)
 
 
 def retrieve_sprint_burndown(jira):
-    return retrieve_sum_of_field(jira, SPRINT_BURNDOWN_JIRA_FILTER, STORY_POINTS_FIELD)
+    return retrieve_sum_of_field(jira, SPRINT_BURNDOWN_JIRA_FILTER,
+                                 STORY_POINTS_FIELD)
 
 
 def retrieve_sprint_velocity(jira, board_id, sprint_regex=None, window=3):
@@ -154,7 +157,8 @@ def main():
     values[QRF_DB_KEY] = retrieve_qrf(jira)
     values[BACKLOG_DEPTH_DB_KEY] = retrieve_backlog_depth(jira)
     values[SPRINT_BURNDOWN_DB_KEY] = retrieve_sprint_burndown(jira)
-    values[SPRINT_VELOCITY_DB_KEY] = retrieve_sprint_velocity(jira, SPRINT_BOARD_ID, SPRINT_REGEX, 3)
+    values[SPRINT_VELOCITY_DB_KEY] =\
+        retrieve_sprint_velocity(jira, SPRINT_BOARD_ID, SPRINT_REGEX, 3)
 
     if args.dry_run:
         print "---\nRetrieved the following values: %s" % values
