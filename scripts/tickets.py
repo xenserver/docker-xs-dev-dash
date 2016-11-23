@@ -80,9 +80,9 @@ def retrieve_qrf(jira):
 
 
 def retrieve_backlog_depth(jira):
-    bd = retrieve_sum_of_field(jira, BACKLOG_DEPTH_JIRA_FILTER,
-                               STORY_POINTS_FIELD)
-    return round(bd, 2)
+    bkl_depth = retrieve_sum_of_field(jira, BACKLOG_DEPTH_JIRA_FILTER,
+                                      STORY_POINTS_FIELD)
+    return round(bkl_depth, 2)
 
 
 def retrieve_sprint_burndown(jira):
