@@ -472,7 +472,7 @@
           "maxDataPoints": 100,
           "nullPointMode": "connected",
           "nullText": null,
-          "postfix": "Ely Must Fix",
+          "postfix": "",
           "postfixFontSize": "50%",
           "prefix": "",
           "prefixFontSize": "50%",
@@ -499,7 +499,7 @@
             }
           ],
           "thresholds": "0,1,3",
-          "title": "",
+          "title": "Ely Must Investigate + SIFIX",
           "type": "singlestat",
           "valueFontSize": "200%",
           "valueMaps": [
