@@ -37,6 +37,7 @@ ADDITIONAL_REPOS = [
     "xenserver/xen-api-libs",
     "xenserver/filesystem-summarise",
     "xenserver/rrd2csv",
+    "xenserver/xcp-networkd"
 ]
 
 
