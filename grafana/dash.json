@@ -989,11 +989,11 @@
           "id": 16,
           "links": [
             {
-              "params": "q_view=summary&q_product=carbon&q_branch=trunk-ring3",
+              "params": "",
               "targetBlank": true,
-              "title": "View on Xenbuilder",
+              "title": "View",
               "type": "absolute",
-              "url": "https://xenbuilder.uk.xensource.com/builds?"
+              "url": "https://ratchet.do.citrite.net/job/xenserver-specs/job/trunk%252Fring3/"
             }
           ],
           "maxDataPoints": 100,
@@ -1058,11 +1058,11 @@
           "id": 15,
           "links": [
             {
-              "params": "q_view=summary&q_product=carbon&q_branch=trunk-ring3",
+              "params": "",
               "targetBlank": true,
-              "title": "View on Xenbuilder",
+              "title": "View",
               "type": "absolute",
-              "url": "https://xenbuilder.uk.xensource.com/builds?"
+              "url": "https://ratchet.do.citrite.net/job/xenserver-specs/job/trunk%252Fring3/"
             }
           ],
           "maxDataPoints": 100,
