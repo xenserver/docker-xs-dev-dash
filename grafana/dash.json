@@ -993,7 +993,7 @@
               "targetBlank": true,
               "title": "View",
               "type": "absolute",
-              "url": "https://ratchet.do.citrite.net/job/xenserver-specs/job/trunk%252Fring3/"
+              "url": "https://ratchet.do.citrite.net/job/xenserver-specs/job/team%252Fring3%252Fmaster/"
             }
           ],
           "maxDataPoints": 100,
@@ -1062,7 +1062,7 @@
               "targetBlank": true,
               "title": "View",
               "type": "absolute",
-              "url": "https://ratchet.do.citrite.net/job/xenserver-specs/job/trunk%252Fring3/"
+              "url": "https://ratchet.do.citrite.net/job/xenserver-specs/job/team%252Fring3%252Fmaster/"
             }
           ],
           "maxDataPoints": 100,
