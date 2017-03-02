@@ -37,7 +37,7 @@ def parse_args_or_exit(argv=None):
 
 def main():
     args = parse_args_or_exit(sys.argv[1:])
-    status = get_jenkins_status('trunk%252Fring3')
+    status = get_jenkins_status('team%252Fring3%252Fmaster')
     build_status = is_last_build_successful(status)
     bvt_status = is_last_build_stable(status)
     if args.dry_run:
