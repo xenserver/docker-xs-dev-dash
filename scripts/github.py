@@ -32,7 +32,6 @@ ADDITIONAL_REPOS = [
     "xenserver/xen-api-libs-specs",
     "xenserver/xen-api",
     "xenserver/xenserver-build-env",
-    "xenserver/planex",
     "xenserver/xs-pull-request-build-scripts",
     "xenserver/xen-api-libs",
     "xenserver/filesystem-summarise",
