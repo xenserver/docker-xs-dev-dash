@@ -29,6 +29,7 @@ COUNT_QUERIES = {
     "PAR": 47171,  # "R3 Dash: PAR"
     "Hotlist": 47531,  # "R3 Dash Hotlist"
     "Staging": 48797,  # "R3 Dash Staging"
+    "FalconMustFix": 57062,  # "R3 Falcon Bugs"
 }
 
 QRF_DB_KEY = "CA,priority=QRF"
