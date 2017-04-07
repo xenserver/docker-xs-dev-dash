@@ -102,8 +102,14 @@ def retrieve_sprint_velocity(jira, board_id, sprint_regex=None, window=3):
 
         latest_completed = sorted(completed, key=id_of_sprint,
                                   reverse=True)[0:window]
-        vels = [jira.completedIssuesEstimateSum(board_id, s.id)
-                for s in latest_completed]
+
+        vels = []
+        for spr in latest_completed:
+            try:
+                vels.append(jira.completedIssuesEstimateSum(board_id, spr.id))
+            except KeyError:
+                continue
+
         avg_v = float(sum(vels)) / len(vels) if vels else float('nan')
         return round(avg_v, 1)
     except JIRAError as exn:
