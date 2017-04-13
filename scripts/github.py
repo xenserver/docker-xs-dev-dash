@@ -31,6 +31,7 @@ ADDITIONAL_REPOS = [
     "xenserver/xen-api-base-specs",
     "xenserver/xen-api-libs-specs",
     "xenserver/xen-api",
+    "xenserver/xenopsd",
     "xenserver/xenserver-build-env",
     "xenserver/xs-pull-request-build-scripts",
     "xenserver/xen-api-libs",
