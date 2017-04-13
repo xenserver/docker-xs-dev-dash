@@ -40,6 +40,11 @@ a file called `scripts/.gh-token` if you don't want to be rate-limited. The
 Makefile rule will ask if you want to generate a dummy one but this will be
 subject to rate-limiting.
 
+## JIRA Authentication
+JIRA is used to get the information for some of the cells in the dashboard, and
+a password must be provided in order for these cells to work correctly. The
+password for the JIRA account should be stored in the `scripts/.jira-pw` file.
+
 ## Development
 The python scripts all supprt a `--dry-run` (or `-n`) option so that you can
 try them out. If you are developing outside the container you will want to
