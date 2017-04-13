@@ -22,7 +22,7 @@ have Docker.
 
 This has now deployed the whole application in a container. It has mapped your
 local port 80 to the container port 80 which is pointing to Grafana. So you
-should be able to open up a broswer and see the dashboard at `localhost`.
+should be able to open up a browser and see the dashboard at `localhost`.
 
 ## Persistent storage
 The Dockerfile and Makefile have been constructed so that a "Data Volume
@@ -33,20 +33,25 @@ If you want to start from scratch, you can run `make purge`.
 
 ## Github Authentication
 Github imposes rate-limiting on its API. The limit is significantly higher if
-you autenticate your requests. The Github script supports this. The Dockerfile
+you authenticate your requests. The Github script supports this. The Dockerfile
 will `ADD` a file containing your key to the container so that it can be used
 by this script. This file must be present when you build the container in
-a file called `scripts/.gh-token` if you don't want to be rate limited. The
+a file called `scripts/.gh-token` if you don't want to be rate-limited. The
 Makefile rule will ask if you want to generate a dummy one but this will be
-subject to rate limiting.
+subject to rate-limiting.
+
+## JIRA Authentication
+JIRA is used to get the information for some of the cells in the dashboard, and
+a password must be provided in order for these cells to work correctly. The
+password for the JIRA account should be stored in the `scripts/.jira-pw` file.
 
 ## Development
 The python scripts all supprt a `--dry-run` (or `-n`) option so that you can
 try them out. If you are developing outside the container you will want to
 install the python packages that the scripts use on your host (see the `pip
 install` command in the Dockerfile). However, it's recommended to do your
-development _inside_ the container. To enter the container use which will drop
-you into a container with all of the services running:
+development _inside_ the container. To enter the container use `make shell`,
+which will drop you into a container with all of the services running:
 
 ```sh
 make shell
@@ -77,13 +82,13 @@ PORTS="-p 8083:8083 -p 8086:8086" make <run|shell>
 
 ## Customisation for other teams
 Most of the scripts to gather data have all of their parameters at the top.
-E.g. `tickets.py` speifies a dictionary at the top of the file of JIRA filter
+E.g. `tickets.py` specifies a dictionary at the top of the file of JIRA filter
 names to gather information for. To track different metrics, just edit these
 scripts and run `make run` (you may want to get rid of the old data using `make
 purge`).
 
 ## Importing old data
-If you have some InfluxDB data to import then then you can use `make shell`
+If you have some InfluxDB data to import then you can use `make shell`
 which mounts the current directory inside the container. This allows you to
 place your data in the directory alongside the Makefile and from within the
 container move whatever you need into `/var/opt/influxdb` which is the volume
