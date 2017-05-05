@@ -285,7 +285,7 @@
               ]
             }
           ],
-          "thresholds": "0,25,50",
+          "thresholds": "0,10,20",
           "title": "Minor and Trivial CA",
           "type": "singlestat",
           "valueFontSize": "200%",
