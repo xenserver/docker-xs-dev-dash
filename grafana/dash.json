@@ -214,7 +214,7 @@
               ]
             }
           ],
-          "thresholds": "0,10,15",
+          "thresholds": "0,6,10",
           "title": "Major CA",
           "type": "singlestat",
           "valueFontSize": "200%",
@@ -285,7 +285,7 @@
               ]
             }
           ],
-          "thresholds": "0,25,50",
+          "thresholds": "0,10,20",
           "title": "Minor and Trivial CA",
           "type": "singlestat",
           "valueFontSize": "200%",
