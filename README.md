@@ -1,5 +1,11 @@
 # docker-xs-dev-dash
 
+---
+
+## This project is now deprecated and may be removed without notice
+
+---
+
 [![Build Status][travis-badge]][travis-url]
 
 A docker image for the Xenserver Ring3 team's information radiatory dashboard
